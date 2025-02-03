@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+</head>
+
+<body>
+<h5 id="oopp"></h5>
+
+	<script>
+		isWeChatBrowser();
+		function isWeChatBrowser() {
+			var ua = navigator.userAgent.toLowerCase();
+			return ua.indexOf('micromessenger') !== -1;
+		}
+
+		if (isWeChatBrowser()) {
+			document.getElementById("oopp").innerHTML="请使用浏览器打开：https://wtb.wuaze.com/?entryFromQR=wxwx";
+		} else {
+			document.getElementById("oopp").innerHTML="正在打开";
+			window.open("https://wtb.wuaze.com/?entryFromQR=b1234","_self");
+			//window.open('https://kimi.moonshot.cn/chat/cugevcpdjjps1k5aa0ug', '_blank');
+			document.getElementById("oopp").innerHTML="正在打开2";
+
+
+		}
+	</script>
+</body>
+
+</html>
